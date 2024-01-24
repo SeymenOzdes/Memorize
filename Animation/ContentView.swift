@@ -8,22 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State  var animationAmount: Double = 1
     
     var body: some View {
-            Button("Tap Me") {
-                withAnimation {
-                    animationAmount += 360
-                }
-            }
-            .padding(50)
-            .background(.red)
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .rotation3DEffect(.degrees(animationAmount), axis: (x: 0.0, y: 1.0, z: 0.0))
+        HStack {
+            CardView(isFaceUp: true)
+            CardView()
+            CardView()
+            CardView()
         }
+        .foregroundColor(.orange)
+        .imageScale(.small)
+        .padding()
+    }
+}
+struct CardView: View {
+    var isFaceUp = false
+    
+    var body: some View {
+        ZStack(content: {
+            if(isFaceUp) {
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(lineWidth: 4.0)
+                Text("👻")
+                    .font(.largeTitle)
+            }
+            else {
+                RoundedRectangle(cornerRadius: 12)
+                    
+            }
+        })
+    }
 }
 
 #Preview {
     ContentView()
 }
+
