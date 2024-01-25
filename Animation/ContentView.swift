@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     
     var body: some View {
@@ -21,22 +22,26 @@ struct ContentView: View {
         .padding()
     }
 }
+
 struct CardView: View {
-    var isFaceUp = false
+   @State var isFaceUp = true
     
     var body: some View {
-        ZStack(content: {
+        ZStack {
+            let base = RoundedRectangle(cornerRadius: 12)
             if(isFaceUp) {
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(lineWidth: 4.0)
+                base.fill(.white)
+                base.strokeBorder(lineWidth: 4.0)
                 Text("👻")
                     .font(.largeTitle)
             }
             else {
-                RoundedRectangle(cornerRadius: 12)
-                    
+                base.fill(.orange)
             }
-        })
+        }
+        .onTapGesture {
+            isFaceUp.toggle()
+        }
     }
 }
 
