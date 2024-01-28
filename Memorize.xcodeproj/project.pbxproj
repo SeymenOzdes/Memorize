@@ -35,7 +35,7 @@
 		2ED767EE2ABCDC5100B256F1 = {
 			isa = PBXGroup;
 			children = (
-				2ED767F92ABCDC5100B256F1 /* Animation */,
+				2ED767F92ABCDC5100B256F1 /* Memorize */,
 				2ED767F82ABCDC5100B256F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +48,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2ED767F92ABCDC5100B256F1 /* Animation */ = {
+		2ED767F92ABCDC5100B256F1 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
 				2ED767FA2ABCDC5100B256F1 /* AnimationApp.swift */,
@@ -56,7 +56,7 @@
 				2ED767FE2ABCDC5300B256F1 /* Assets.xcassets */,
 				2ED768002ABCDC5300B256F1 /* Preview Content */,
 			);
-			path = Animation;
+			path = Memorize;
 			sourceTree = "<group>";
 		};
 		2ED768002ABCDC5300B256F1 /* Preview Content */ = {
