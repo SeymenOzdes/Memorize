@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2ED767F72ABCDC5100B256F1 /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ED767F72ABCDC5100B256F1 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED767FA2ABCDC5100B256F1 /* AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationApp.swift; sourceTree = "<group>"; };
 		2ED767FC2ABCDC5100B256F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2ED767FE2ABCDC5300B256F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		2ED767F82ABCDC5100B256F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2ED767F72ABCDC5100B256F1 /* Animation.app */,
+				2ED767F72ABCDC5100B256F1 /* Memorize.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2ED767F62ABCDC5100B256F1 /* Animation */ = {
+		2ED767F62ABCDC5100B256F1 /* Memorize */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2ED768052ABCDC5300B256F1 /* Build configuration list for PBXNativeTarget "Animation" */;
+			buildConfigurationList = 2ED768052ABCDC5300B256F1 /* Build configuration list for PBXNativeTarget "Memorize" */;
 			buildPhases = (
 				2ED767F32ABCDC5100B256F1 /* Sources */,
 				2ED767F42ABCDC5100B256F1 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Animation;
+			name = Memorize;
 			productName = Animation;
-			productReference = 2ED767F72ABCDC5100B256F1 /* Animation.app */;
+			productReference = 2ED767F72ABCDC5100B256F1 /* Memorize.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2ED767F22ABCDC5100B256F1 /* Build configuration list for PBXProject "Animation" */;
+			buildConfigurationList = 2ED767F22ABCDC5100B256F1 /* Build configuration list for PBXProject "Memorize" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2ED767F62ABCDC5100B256F1 /* Animation */,
+				2ED767F62ABCDC5100B256F1 /* Memorize */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2ED767F22ABCDC5100B256F1 /* Build configuration list for PBXProject "Animation" */ = {
+		2ED767F22ABCDC5100B256F1 /* Build configuration list for PBXProject "Memorize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2ED768032ABCDC5300B256F1 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2ED768052ABCDC5300B256F1 /* Build configuration list for PBXNativeTarget "Animation" */ = {
+		2ED768052ABCDC5300B256F1 /* Build configuration list for PBXNativeTarget "Memorize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2ED768062ABCDC5300B256F1 /* Debug */,
