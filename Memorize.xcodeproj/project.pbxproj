@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2ED767FB2ABCDC5100B256F1 /* AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED767FA2ABCDC5100B256F1 /* AnimationApp.swift */; };
-		2ED767FD2ABCDC5100B256F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED767FC2ABCDC5100B256F1 /* ContentView.swift */; };
-		2ED767FF2ABCDC5300B256F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ED767FE2ABCDC5300B256F1 /* Assets.xcassets */; };
+		2EC68E472B6709BD004FFC6A /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC68E462B6709BD004FFC6A /* MemorizeApp.swift */; };
+		2EC68E4F2B670B1F004FFC6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC68E4B2B670B1F004FFC6A /* Assets.xcassets */; };
+		2EC68E502B670B1F004FFC6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC68E4C2B670B1F004FFC6A /* ContentView.swift */; };
 		2ED768022ABCDC5300B256F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ED768012ABCDC5300B256F1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EC68E462B6709BD004FFC6A /* MemorizeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
+		2EC68E4B2B670B1F004FFC6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EC68E4C2B670B1F004FFC6A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2ED767F72ABCDC5100B256F1 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ED767FA2ABCDC5100B256F1 /* AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationApp.swift; sourceTree = "<group>"; };
-		2ED767FC2ABCDC5100B256F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2ED767FE2ABCDC5300B256F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ED768012ABCDC5300B256F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,9 +51,9 @@
 		2ED767F92ABCDC5100B256F1 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				2ED767FA2ABCDC5100B256F1 /* AnimationApp.swift */,
-				2ED767FC2ABCDC5100B256F1 /* ContentView.swift */,
-				2ED767FE2ABCDC5300B256F1 /* Assets.xcassets */,
+				2EC68E4B2B670B1F004FFC6A /* Assets.xcassets */,
+				2EC68E4C2B670B1F004FFC6A /* ContentView.swift */,
+				2EC68E462B6709BD004FFC6A /* MemorizeApp.swift */,
 				2ED768002ABCDC5300B256F1 /* Preview Content */,
 			);
 			path = Memorize;
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED768022ABCDC5300B256F1 /* Preview Assets.xcassets in Resources */,
-				2ED767FF2ABCDC5300B256F1 /* Assets.xcassets in Resources */,
+				2EC68E4F2B670B1F004FFC6A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED767FD2ABCDC5100B256F1 /* ContentView.swift in Sources */,
-				2ED767FB2ABCDC5100B256F1 /* AnimationApp.swift in Sources */,
+				2EC68E472B6709BD004FFC6A /* MemorizeApp.swift in Sources */,
+				2EC68E502B670B1F004FFC6A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Animation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memorize/Info.plist;
@@ -301,7 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Animation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memorize/Info.plist;
