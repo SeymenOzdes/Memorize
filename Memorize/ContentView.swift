@@ -11,7 +11,7 @@ struct ContentView: View {
     let emojis: Array<String> = ["😚", "😚", "😀", "😀", "🥲", "🥲", "🥸", "🤩", "🥶", "😶‍🌫️", "🥸"].shuffled()
     let animals: Array<String> = ["🐶", "🐶", "🐱", "🐱", "🐹", "🐹", "🦁", "🐣", "🐨", "🦁", "🐼"].shuffled()
     let food: Array<String> = ["🍏", "🍏", "🍎", "🍎", "🍐", "🍋", "🥥", "🍉", "🍉", "🍑", "🥥"].shuffled()
-    @State var cardCount = 4
+    @State var cardCount = 6
     @State var defaultTheme = themes.emojis
     
     var body: some View {
@@ -66,7 +66,7 @@ struct ContentView: View {
     }
     
     var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
             ForEach(0..<cardCount, id: \.self) { index in
                 switch defaultTheme {
                 case .emojis:
@@ -120,7 +120,7 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-   @State var isFaceUp = true
+   @State var isFaceUp = false // default olarak kartlar kapalıdır.
    let content: String
     
     var body: some View {
