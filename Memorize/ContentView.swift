@@ -44,11 +44,15 @@ struct ContentView: View {
     enum themes {
         case emojis, animals, food
     }
-    func themeChanger(name: String, theme: themes) -> some View { // tema değiştirme fonksiyonu
+    func themeChanger(name: String, theme: themes, image: String) -> some View { // tema değiştirme fonksiyonu
         Button(action: {
             defaultTheme = theme.self
         }, label: {
-            Text(name)
+            VStack {
+                Image(systemName: image)
+                    .font(.title)
+                Text(name)
+            }
         })
     }
     func cardCountAdjuster(by offSet: Int, symbol: String) -> some View { // kart sayım ayarlayıcı
@@ -96,13 +100,13 @@ struct ContentView: View {
         .font(.title)
     }
     var animalThemeButton: some View {
-        themeChanger(name: "Animal", theme: themes.animals)
+        themeChanger(name: "Animals", theme: themes.animals, image: "dog.circle.fill")
     }
     var foodsThemeButton: some View {
-        themeChanger(name: "Foods", theme: themes.food)
+        themeChanger(name: "Foods", theme: themes.food, image: "fork.knife.circle.fill")
     }
     var emojisThemeButton: some View {
-        themeChanger(name: "Emojis", theme: themes.emojis)
+        themeChanger(name: "Emojis", theme: themes.emojis, image: "figure.wave.circle.fill")
     }
     var themeChangerButtons: some View {
         HStack(alignment: .center, spacing: 30) {
