@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    let emojis: Array<String> = ["😚", "😀", "🥲", "🥸", "🤩", "🥶", "😶‍🌫️", "🤫"]
-    let animals: Array<String> = ["🐶", "🐱", "🐹", "🐷", "🐣", "🐨", "🦁", "🐼"]
-    let food: Array<String> = ["🍏", "🍎", "🍐", "🍋", "🍌", "🍉", "🍑", "🥥"]
+    let emojis: Array<String> = ["😚", "😚", "😀", "😀", "🥲", "🥲", "🥸", "🤩", "🥶", "😶‍🌫️", "🥸"].shuffled()
+    let animals: Array<String> = ["🐶", "🐶", "🐱", "🐱", "🐹", "🐹", "🦁", "🐣", "🐨", "🦁", "🐼"].shuffled()
+    let food: Array<String> = ["🍏", "🍏", "🍎", "🍎", "🍐", "🍋", "🥥", "🍉", "🍉", "🍑", "🥥"].shuffled()
     @State var cardCount = 4
     @State var defaultTheme = themes.emojis
     
@@ -44,7 +44,7 @@ struct ContentView: View {
     enum themes {
         case emojis, animals, food
     }
-    func themeChangerAdjuster(name: String, theme: themes) -> some View { // tema değiştirme fonksiyonu
+    func themeChanger(name: String, theme: themes) -> some View { // tema değiştirme fonksiyonu
         Button(action: {
             defaultTheme = theme.self
         }, label: {
@@ -96,13 +96,13 @@ struct ContentView: View {
         .font(.title)
     }
     var animalThemeButton: some View {
-        themeChangerAdjuster(name: "Animal", theme: themes.animals)
+        themeChanger(name: "Animal", theme: themes.animals)
     }
     var foodsThemeButton: some View {
-        themeChangerAdjuster(name: "Foods", theme: themes.food)
+        themeChanger(name: "Foods", theme: themes.food)
     }
     var emojisThemeButton: some View {
-        themeChangerAdjuster(name: "Emojis", theme: themes.emojis)
+        themeChanger(name: "Emojis", theme: themes.emojis)
     }
     var themeChangerButtons: some View {
         HStack(alignment: .center, spacing: 30) {
