@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    let emojis: Array<String> = ["👻", "👁️", "🧝🏽‍♂️", "🧞", "👻", "👁️", "🧝🏽‍♂️", "🧞"]
+    let emojis: Array<String> = ["😚", "😀", "🥲", "🥸", "🤩", "🥶", "😶‍🌫️", "🤫"]
+    let animals: Array<String> = ["🐶", "🐱", "🐹", "🐷", "🐣", "🐨", "🦁", "🐼"]
+    let food: Array<String> = ["🍏", "🍎", "🍐", "🍋", "🍌", "🍉", "🍑", "🥥"]
     @State var cardCount = 4
+    @State var defaultTheme = themes.emojis
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Memorize!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
             ScrollView {
                 cards
             }
@@ -22,8 +28,30 @@ struct ContentView: View {
         }
         .imageScale(.medium)
         .padding()
+        
+        // Theme's buttons
+        VStack(spacing: 6) {
+            Text("Themes")
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundStyle(.orange)
+            
+            Divider().frame(width: 240, height: 3)
+                
+            themeChangerButtons
+        }
     }
-    func cardCountAdjuster(by offSet: Int, symbol: String) -> some View {
+    enum themes {
+        case emojis, animals, food
+    }
+    func themeChangerAdjuster(name: String, theme: themes) -> some View { // tema değiştirme fonksiyonu
+        Button(action: {
+            defaultTheme = theme.self
+        }, label: {
+            Text(name)
+        })
+    }
+    func cardCountAdjuster(by offSet: Int, symbol: String) -> some View { // kart sayım ayarlayıcı
         Button(action: {
                 cardCount += offSet
         }, label: {
@@ -36,8 +64,17 @@ struct ContentView: View {
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
             ForEach(0..<cardCount, id: \.self) { index in
-                CardView(content: emojis[index])
-                    .aspectRatio(2/3, contentMode: .fit) // IDK
+                switch defaultTheme {
+                case .emojis:
+                    CardView(content: emojis[index])
+                        .aspectRatio(2/3, contentMode: .fit) // IDK
+                case .animals:
+                    CardView(content: animals[index])
+                        .aspectRatio(2/3, contentMode: .fit)
+                case .food:
+                    CardView(content: food[index])
+                        .aspectRatio(2/3, contentMode: .fit)
+                }
             }
         }
         .foregroundColor(.orange)
@@ -57,6 +94,24 @@ struct ContentView: View {
             cardRemover
         }
         .font(.title)
+    }
+    var animalThemeButton: some View {
+        themeChangerAdjuster(name: "Animal", theme: themes.animals)
+    }
+    var foodsThemeButton: some View {
+        themeChangerAdjuster(name: "Foods", theme: themes.food)
+    }
+    var emojisThemeButton: some View {
+        themeChangerAdjuster(name: "Emojis", theme: themes.emojis)
+    }
+    var themeChangerButtons: some View {
+        HStack(alignment: .center, spacing: 30) {
+            animalThemeButton
+            
+            foodsThemeButton
+            
+            emojisThemeButton
+        }
     }
 }
 
