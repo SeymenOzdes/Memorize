@@ -11,7 +11,6 @@ struct ContentView: View {
     let emojis: Array<String> = ["😚", "😚", "😀", "😀", "🥲", "🥲", "🥸", "🤩", "🥶", "😶‍🌫️", "🥸"].shuffled()
     let animals: Array<String> = ["🐶", "🐶", "🐱", "🐱", "🐹", "🐹", "🦁", "🐣", "🐨", "🦁", "🐼"].shuffled()
     let food: Array<String> = ["🍏", "🍏", "🍎", "🍎", "🍐", "🍋", "🥥", "🍉", "🍉", "🍑", "🥥"].shuffled()
-    @State var cardCount = 6
     @State var defaultTheme = themes.emojis
     
     var body: some View {
@@ -23,8 +22,6 @@ struct ContentView: View {
                 cards
             }
             Spacer()
-            
-            cardCountAdjusters
         }
         .imageScale(.medium)
         .padding()
@@ -55,19 +52,9 @@ struct ContentView: View {
             }
         })
     }
-    func cardCountAdjuster(by offSet: Int, symbol: String) -> some View { // kart sayım ayarlayıcı
-        Button(action: {
-                cardCount += offSet
-        }, label: {
-            Image(systemName: symbol)
-        })
-        // UI componenti belirli koşullarda etkisiz hale getirmemizi sağlar.
-        .disabled(cardCount + offSet < 1 || cardCount + offSet > emojis.count)
-    }
-    
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-            ForEach(0..<cardCount, id: \.self) { index in
+            ForEach(emojis.indices, id: \.self) { index in
                 switch defaultTheme {
                 case .emojis:
                     CardView(content: emojis[index])
@@ -83,22 +70,7 @@ struct ContentView: View {
         }
         .foregroundColor(.orange)
     }
-    var cardAdder: some View {
-        cardCountAdjuster(by: 1, symbol: "plus")
-    }
-    var cardRemover: some View {
-        cardCountAdjuster(by: -1, symbol: "minus")
-    }
-    var cardCountAdjusters: some View {
-        HStack {
-            cardAdder
-            
-            Spacer()
-            
-            cardRemover
-        }
-        .font(.title)
-    }
+   
     var animalThemeButton: some View {
         themeChanger(name: "Animals", theme: themes.animals, image: "dog.circle.fill")
     }
@@ -118,7 +90,6 @@ struct ContentView: View {
         }
     }
 }
-
 struct CardView: View {
    @State var isFaceUp = false // default olarak kartlar kapalıdır.
    let content: String
@@ -141,7 +112,6 @@ struct CardView: View {
         }
     }
 }
-
 #Preview {
     ContentView()
 }
